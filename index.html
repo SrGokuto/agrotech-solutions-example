@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Solutions - Sistema de Monitoreo Agrícola IoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'agro-green': '#10B981',
+                        'agro-dark': '#1F2937',
+                        'agro-light': '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon_agrotech.png">
+</head>
+<body class="bg-agro-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm px-4 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-agro-dark">AgroTech Solutions</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-agro-dark hover:text-agro-green transition">Inicio</a>
+                <a href="#features" class="text-agro-dark hover:text-agro-green transition">Características</a>
+                <a href="#pricing" class="text-agro-dark hover:text-agro-green transition">Precios</a>
+                <a href="#contact" class="text-agro-dark hover:text-agro-green transition">Contacto</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-agro-dark"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-10 lg:mb-0">
+                <h1 class="text-4xl lg:text-6xl font-bold text-agro-dark mb-6">
+                    Sistema de Monitoreo Agrícola IoT
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Monitorea tus cultivos con sensores conectados y datos en tiempo real.
+                </p>
+                <button class="bg-agro-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition">
+                    Comenzar
+                </button>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="relative">
+                    <!-- Illustration Background -->
+                    <div class="w-96 h-96 bg-gradient-to-br from-blue-100 to-green-100 rounded-full mx-auto relative overflow-hidden">
+                        <img src="./assets/favicon_agrotech.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-agro-dark mb-16">Funcionalidades del Sistema</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- RF1 - User Registration -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-agro-green rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-plus text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-agro-dark mb-3">Registro y Autenticación de Usuarios</h3>
+                    <p class="text-gray-600">Inicio de sesión seguro y gestión de cuentas</p>
+                </div>
+
+                <!-- RF2 - IoT Sensor Management -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-agro-dark mb-3">Gestión de Sensores IoT</h3>
+                    <p class="text-gray-600">Agregar, editar y eliminar sensores</p>
+                </div>
+
+                <!-- RF3 - Real-Time Data -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-agro-dark mb-3">Visualización de Datos en Tiempo Real</h3>
+                    <p class="text-gray-600">Monitorea métricas a través de dashboards</p>
+                </div>
+
+                <!-- RF4 - Automated Alerts -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-agro-dark mb-3">Alertas Automatizadas</h3>
+                    <p class="text-gray-600">Recibe notificaciones por valores críticos</p>
+                </div>
+
+                <!-- RF5 - Historical Reports -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-agro-dark mb-3">Reportes Históricos</h3>
+                    <p class="text-gray-600">Genera reportes en PDF/Excel</p>
+                </div>
+
+                <!-- RF6 - Multi-User Support -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-agro-dark mb-3">Soporte Multiusuario</h3>
+                    <p class="text-gray-600">Diferentes roles para miembros de la finca</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section class="py-20 bg-agro-light">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-agro-dark mb-16">Dashboard de Monitoreo</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <!-- Sensor Cards -->
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-agro-dark">Humedad del Suelo</h3>
+                            <i class="fas fa-tint text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2" id="humidity">68%</div>
+                        <div class="text-sm text-gray-500">Parcela A - Sensor 01</div>
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-agro-dark">Temperatura</h3>
+                            <i class="fas fa-thermometer-half text-green-500 text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-green-600 mb-2" id="temperature">24°C</div>
+                        <div class="text-sm text-gray-500">Parcela B - Sensor 02</div>
+                    </div>
+
+                    <div class="bg-yellow-50 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-agro-dark">pH del Suelo</h3>
+                            <i class="fas fa-flask text-yellow-500 text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-yellow-600 mb-2" id="ph">6.8</div>
+                        <div class="text-sm text-gray-500">Parcela C - Sensor 03</div>
+                    </div>
+
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-agro-dark">Luminosidad</h3>
+                            <i class="fas fa-sun text-purple-500 text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-purple-600 mb-2" id="light">850 lux</div>
+                        <div class="text-sm text-gray-500">Parcela D - Sensor 04</div>
+                    </div>
+                </div>
+
+                <!-- Alerts Section -->
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6" id="alert-box">
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-red-500 mr-3"></i>
+                        <div>
+                            <h4 class="font-semibold text-red-800">Alerta Crítica</h4>
+                            <p class="text-red-700" id="alert-text">Humedad del suelo en Parcela A por debajo del 70%. Riego recomendado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sensor Management -->
+                <div class="border-t pt-6">
+                    <h3 class="text-xl font-semibold text-agro-dark mb-4">Gestión de Sensores</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="pb-3 text-gray-600">ID Sensor</th>
+                                    <th class="pb-3 text-gray-600">Tipo</th>
+                                    <th class="pb-3 text-gray-600">Parcela</th>
+                                    <th class="pb-3 text-gray-600">Estado</th>
+                                    <th class="pb-3 text-gray-600">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3">SEN001</td>
+                                    <td class="py-3">Humedad</td>
+                                    <td class="py-3">Parcela A</td>
+                                    <td class="py-3"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Activo</span></td>
+                                    <td class="py-3">
+                                        <button class="text-blue-600 hover:text-blue-800 mr-2"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3">SEN002</td>
+                                    <td class="py-3">Temperatura</td>
+                                    <td class="py-3">Parcela B</td>
+                                    <td class="py-3"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Activo</span></td>
+                                    <td class="py-3">
+                                        <button class="text-blue-600 hover:text-blue-800 mr-2"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="mt-4 bg-agro-green text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                        <i class="fas fa-plus mr-2"></i>Agregar Sensor
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Management Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-agro-dark mb-16">Gestión de Usuarios</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- Admin Role -->
+                    <div class="text-center p-6 border rounded-lg">
+                        <i class="fas fa-user-shield text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-agro-dark mb-2">Administrador</h3>
+                        <p class="text-gray-600">Acceso completo al sistema</p>
+                        <ul class="text-sm text-gray-500 mt-4 space-y-1">
+                            <li>• Gestión de usuarios</li>
+                            <li>• Configuración de alertas</li>
+                            <li>• Reportes avanzados</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Role -->
+                    <div class="text-center p-6 border rounded-lg">
+                        <i class="fas fa-user-cog text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-agro-dark mb-2">Técnico</h3>
+                        <p class="text-gray-600">Gestión de sensores y datos</p>
+                        <ul class="text-sm text-gray-500 mt-4 space-y-1">
+                            <li>• Configurar sensores</li>
+                            <li>• Ver datos en tiempo real</li>
+                            <li>• Generar reportes básicos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Viewer Role -->
+                    <div class="text-center p-6 border rounded-lg">
+                        <i class="fas fa-user text-4xl text-gray-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-agro-dark mb-2">Observador</h3>
+                        <p class="text-gray-600">Solo visualización</p>
+                        <ul class="text-sm text-gray-500 mt-4 space-y-1">
+                            <li>• Ver dashboard</li>
+                            <li>• Recibir alertas</li>
+                            <li>• Consultar históricos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t pt-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold text-agro-dark">Usuarios Registrados</h3>
+                        <button class="bg-agro-green text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                            <i class="fas fa-user-plus mr-2"></i>Nuevo Usuario
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="pb-3 text-gray-600">Nombre</th>
+                                    <th class="pb-3 text-gray-600">Correo</th>
+                                    <th class="pb-3 text-gray-600">Rol</th>
+                                    <th class="pb-3 text-gray-600">Último Acceso</th>
+                                    <th class="pb-3 text-gray-600">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3">Juan Pérez</td>
+                                    <td class="py-3">juan@finca.com</td>
+                                    <td class="py-3"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">Administrador</span></td>
+                                    <td class="py-3">Hace 2 horas</td>
+                                    <td class="py-3">
+                                        <button class="text-blue-600 hover:text-blue-800 mr-2"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-600 hover:text-red-800"><i class="fas fa-user-minus"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3">María González</td>
+                                    <td class="py-3">maria@finca.com</td>
+                                    <td class="py-3"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Técnico</span></td>
+                                    <td class="py-3">Hace 1 día</td>
+                                    <td class="py-3">
+                                        <button class="text-blue-600 hover:text-blue-800 mr-2"><i class="fas fa-edit"></i></button>
+                                        <button class="text-red-600 hover:text-red-800"><i class="fas fa-user-minus"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports Section -->
+    <section class="py-20 bg-agro-light">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-agro-dark mb-16">Reportes Históricos</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Report Generator -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-agro-dark mb-6">Generar Reporte</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Reporte</label>
+                                <select class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-agro-green">
+                                    <option>Humedad del Suelo</option>
+                                    <option>Temperatura</option>
+                                    <option>pH del Suelo</option>
+                                    <option>Todos los Sensores</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Fecha Inicio</label>
+                                    <input type="date" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-agro-green">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Fecha Fin</label>
+                                    <input type="date" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-agro-green">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Formato</label>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="format" value="pdf" class="mr-2">
+                                        <span>PDF</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="format" value="excel" class="mr-2">
+                                        <span>Excel</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-agro-green text-white py-3 rounded-lg hover:bg-green-600 transition">
+                                <i class="fas fa-download mr-2"></i>Generar Reporte
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Recent Reports -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-agro-dark mb-6">Reportes Recientes</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-agro-dark">Reporte Mensual - Agosto 2025</h4>
+                                    <p class="text-sm text-gray-600">Todos los sensores</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-gray-800">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-agro-dark">Análisis de Humedad - Semana 34</h4>
+                                    <p class="text-sm text-gray-600">Parcelas A, B, C</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-gray-800">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-agro-dark">Reporte de Temperatura - Julio 2025</h4>
+                                    <p class="text-sm text-gray-600">Todas las parcelas</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-gray-800">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal (Hidden by default) -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-agro-dark">Iniciar Sesión</h2>
+                <button onclick="closeLoginModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico</label>
+                    <input type="email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-agro-green" placeholder="tu@correo.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Contraseña</label>
+                    <input type="password" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-agro-green" placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full bg-agro-green text-white py-3 rounded-lg hover:bg-green-600 transition">
+                    Iniciar Sesión
+                </button>
+                <div class="text-center mt-4">
+                    <a href="#" class="text-agro-green hover:underline">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-agro-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AgroTech Solutions</h3>
+                    <p class="text-gray-300">Transformando la agricultura con tecnología IoT avanzada.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Producto</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Características</a></li>
+                        <li><a href="#" class="hover:text-white">Precios</a></li>
+                        <li><a href="#" class="hover:text-white">Demo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Soporte</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Documentación</a></li>
+                        <li><a href="#" class="hover:text-white">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Conectar</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 AgroTech Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for interactivity
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        // Add click event to Get Started button
+        document.querySelector('.bg-agro-green').addEventListener('click', openLoginModal);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simulate real-time data updates
+        function updateSensorData() {
+            const sensors = [
+                { id: 'humidity', min: 10, max: 90, suffix: '%' },
+                { id: 'temperature', min: 20, max: 28, suffix: '°C' },
+                { id: 'ph', min: 6.5, max: 7.2, suffix: '' },
+                { id: 'light', min: 800, max: 900, suffix: ' lux' }
+            ];
+            sensors.forEach(sensor => {
+                const value = (Math.random() * (sensor.max - sensor.min) + sensor.min).toFixed(1);
+                document.getElementById(sensor.id).innerText = value + sensor.suffix;
+            });
+
+            // This would normally update with real IoT data
+            const alertBox = document.getElementById('alert-box');
+            const alertText = document.getElementById('alert-text');
+            if (parseFloat(document.getElementById('humidity').innerText) < 30) {
+                alertBox.classList.remove('hidden');
+                alertText.innerText = 'Humedad del suelo en Parcela A por debajo del 30%. Riego recomendado.';
+            } else if (parseFloat(document.getElementById('humidity').innerText) > 70) {
+                alertBox.classList.remove('hidden');
+                alertText.innerText = 'Humedad del suelo en Parcela A por encima de 70%. Considera revisar los parametros!';
+            } else {
+                alertBox.classList.add('hidden');
+            }
+            console.log('Datos de sensores actualizados en tiempo real');
+        }
+
+        // Update sensor data every 10 seconds (simulation)
+        setInterval(updateSensorData, 10000);
+    </script>
+</body>
+</html>
